@@ -14,3 +14,7 @@ print(db_nw.print_all_product_records())
 print(db_nw.average_product_price_SQL())
 
 print(db_nw.average_product_price_python())
+
+print(db_nw.read_one_customer('BLAUS'))
+
+print(db_nw.read_one_product(4))

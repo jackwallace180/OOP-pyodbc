@@ -51,6 +51,25 @@ class ConnectMSserver():
             prices.append(record.UnitPrice)
         return (sum(prices)/len(prices))
 
+    def read_one_customer(self, entry1):
+        query_rows = self.__filter_query("SELECT * FROM Customers")
+        while True:
+            record1 = query_rows.fetchone()
+            if entry1 == record1.CustomerID:
+                return record1
+
+
+
+    def read_one_product(self, entry1):
+        query_rows = self.__filter_query("SELECT * FROM Products")
+        while True:
+            record1 = query_rows.fetchone()
+            if entry1 == record1.ProductID:
+                return record1
+
+
+
+
 
 
 
@@ -78,7 +97,3 @@ class ConnectMSserver():
 #destroy 1 entry
     #the id of the sepecific record
     #destroy the record
-
-
-
-
